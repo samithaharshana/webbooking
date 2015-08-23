@@ -1,0 +1,454 @@
+
+/********** for header***************/
+
+/* set margin to 0 fit wth bounds and bg color*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#d9d9d9;
+}
+
+.iassl-form a{
+	display: none !important;
+	}
+																																																				
+#main-wrapper-header
+{width:100%;
+	height:auto;
+	float:left;
+  }
+  
+  /*top image adding*/
+  .main-wrapper-header-bg {
+	width:100%;
+	height:114px;
+	float:left;
+	background-image:url(../images/header-bg.gif);
+	background-position:left top;
+	background-repeat:repeat-x;
+}
+/* get the margin*/
+.main-wrapper-header-div {
+	width:1300px;
+	height:114px;
+	margin:auto;
+}
+
+.main-wrapper-header-div-res-right {
+	width:740px;
+	height:auto;
+	float:right;
+}
+
+/*set the image logo padding top 24 and size as follows*/
+.main-wrapper-header-div-logo {
+	width:260px;
+	height:90px;
+	float:left;
+	padding-top:10px;
+	padding-left:0px;
+}
+/* set the menu bar to right*/
+.main-wrapper-header-res-right-1 {
+padding-top:10px;
+	width:650px;
+	height:35px;
+	float:right;
+}
+/* push right to the reservation link*/
+.main-login{
+	
+	width:600px; 
+	height:60px; 
+	float:left;
+}
+
+/*set member login icon in place*/
+.login-click{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#B6AD95;
+	cursor:pointer;
+	display:block;
+	float:right;
+	width:100px;
+	margin-right:20px;
+}
+/* disappear the login*/
+
+/* */
+.login-row{
+	width:149px;
+	height:40px;
+	float:left;
+	margin-right:12px;
+}
+/* set the txt field size*/
+.login-txt-input{
+	width:123px;
+	height:12px;
+	background-color:#E6E0D6;
+	border:solid 1px #CAC4BA;
+}
+/*plase the reservation btn*/
+.main-wrapper-header-res-right-2 {
+	width:131px;
+	height:auto;
+	float:right;
+}
+
+.main-wrapper-header-res-right-3 {
+	width:502px;
+	height:auto;
+	float:right;
+	padding-right:50px;
+	padding-bottom:0px;
+	text-align:right;
+	margin-top:74px;
+	font-color:#FFFFFF;
+}
+
+/*getting the menu item to horizontal order*/
+.main-wrapper-header-menu-div-2 {
+	width:auto;
+	height:14px;
+	float:right;
+	padding-top:1px;
+	padding-left:12px;
+	padding-right:12px;
+	border-left:solid #3B0B0B 1px;
+}
+
+.main-wrapper-header-menu-div-3 {
+	width:auto;
+	height:14px;
+	float:right;
+	padding-top:1px;
+	padding-left:12px;
+	padding-right:12px;
+}
+/*text styles*/
+.text-style-1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	font-color: #FFFFFF;
+	text-decoration: none;
+}
+/* set the link*/
+.new-links a{
+	float:left;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:10px;
+	font-weight:bold;
+	text-transform:uppercase;
+	color:#B6AD95;
+	text-align:center;
+}
+/* set the colour of link for cancaling*/
+.new-links a:hover {
+	color:#958865;
+}
+
+/*************************** for footer***************/
+
+/**/
+.footer-main-wrapper-div {
+	width:100%;
+	height:auto;
+	float:left;
+/*	background-image:url(../_images/footer/footer-bg.png);
+	background-position:left top;
+	background-repeat:repeat-x;*/
+}
+
+
+/* set the padding of column names*/
+.footer-main-wrapper-div-2 {
+	width:960px;
+	height:auto;
+	float:left;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:15px;
+}
+
+/* color added to footer*/
+.footer-main-wrapper-div2 {
+	width:100%;
+	height:auto;
+	float:left;
+	background-color:#C0C0C0;
+}
+/* push to the middle*/
+.footer-main-wrapper-div-1 {
+	width:1060px;
+	height:auto;
+	margin:auto;
+}
+/*set padding*/
+.footer-main-wrapper-div-3 {
+	width:950px;
+	height:auto;
+	float:left;
+	padding-top:8px;
+	padding-left:10px;
+}
+	
+/* divide in to two rows */
+.footer-main-wrapper-div-4 {
+	width:275px;
+	height:auto;
+	float:left;
+	padding-bottom:8px;
+}
+/*push to rightt*/
+.footer-main-wrapper-div-5 {
+	width:400px;
+	height:auto;
+	float:right;
+	padding-bottom:8px;
+}
+/*  push right to icon*/
+.footer-main-wrapper-div-6 {
+	width:90px;
+	height:auto;
+	float:right;
+	padding-top:3px;
+	text-align:right;
+}
+
+/* right align*/
+.footer-main-wrapper-div-7 {
+	width:290px;
+	height:auto;
+	float:right;
+	padding-top:3px;
+	text-align:right;
+	padding-right:5px;
+}
+
+.text-style-6 {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #433014;
+	text-decoration: none;
+}
+
+.text-style-18 {
+	font-size: 11px;
+	font-weight: bold;
+	color: #fff;
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-style: normal;
+	line-height: normal;
+	font-variant: normal;
+}
+
+/* slideshow*/
+.main-wrapper-content-mImg-div {
+	width:960px; 
+	height:350px;
+	float:left;
+}
+.main-wrapper-content-mImg-div-1 {
+
+	width:550px;
+	height:300px;
+	
+	margin:0 auto;
+	/*border:solid 10px #ede9e2;*/
+}
+.slider-images-new{
+	height: 600px;
+}
+
+
+element.style {
+    display: block;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+.main-wrapper-content-bg {
+	width:100%;
+	height:auto;
+	float:left;
+	background-image:url(../images/background.jpg);
+	background-position:center top;
+	background-repeat:no-repeat;
+	background-color:#d9d9d9;
+}
+.main-wrapper-content-menu-div {
+	
+}
+
+.sliderInner{
+left:0px;
+
+}
+
+/* for text content*/
+
+.main-wrapper-content-text-div {
+	width:950px;
+	height:auto;
+	float:left;
+	
+	padding-left:205px;
+	padding-bottom:10px;
+}
+.main-wrapper-content-text-div-1 {
+	width:920px;
+	height:auto;
+	float:left;
+	background-color:#FFF;
+	
+}
+
+.main-content-top-div {
+	width:940px;
+	height:auto;
+	float:left;
+/*	padding-left:36px;*/
+	padding-top:14px;
+}
+
+.main-content-top-div-2 {
+	width:868px;
+	height:auto;
+	float:left;
+	padding-left:36px;
+	padding-right:36px;
+}
+
+.main-content-top-div-3 {
+	width:680px;
+	height:auto;
+	float:left;
+	padding-bottom:4px;
+}
+.text-style-4 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:bold;
+	color: #a5934e;
+	text-decoration: none;
+}
+.text-style-5 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #221a09;
+	text-decoration: none;
+}
+
+.main-content-top-div-4 {
+	width:680px;
+	height:auto;
+	float:left;
+	text-align:justify;
+	padding-bottom:16px;
+}
+.main-content-top-div-5 {
+	width:920px;
+	height:auto;
+	float:left;
+	padding-left:10px;
+	padding-right:10px;
+}
+
+#container { position:relative; width:1012px; margin:0 auto; }
+#content { position:relative; /*background:url(../images/comm/bg_shadow-tile.png) repeat-y;*/ }
+#topShadow { padding:0 26px; /*background:url(../images/comm/bg_shadow-top.png) 0 0 no-repeat;*/ }
+#filmstrip { position:relative; width:865px; height:250px; padding-top:55px; padding-top:24px; margin-top:-50px; margin-top:-19px; margin-left:2px; overflow:hidden; z-index:2; }
+
+body, ul, li {
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+
+	line-height:21px;
+	text-align:left;
+}
+.btn{
+padding-top:px
+
+
+}
+.registerbtn{
+padding-top:1px;
+
+}
+
+/* adaaaaaaaaaaaaaaaa*/
+
+.main{
+
+height:auto;
+padding-left:320px;
+
+}
+
+.emailid{
+padding-left:0px;
+
+}
+
+.password{
+padding-left:90px;
+
+
+}
+
+.passwordlbl{
+padding-left:90px;
+font-color:#FFFFFF;	
+}
+
+.loginbtn{
+padding-left:360px;
+padding-top:22px;
+
+
+}
+.regbtn{
+padding-left:100px;
+
+}
+.registration{
+padding-left:360px;
+padding-top:10px;
+
+}
+
+.reservation{
+padding-bottom:2px;
+padding-right:100px;
+
+
+}
+
+.member{
+padding-left:310px;
+padding-top:50px;
+
+}
+
+.res{
+padding-top:10px;
+padding-right:100px;
+}
+
+.submenu{
+padding-right:35px;
+}
+
+body {
+	font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+	font-size: 62.5%;
+}
