@@ -412,9 +412,9 @@ font-color:#FFFFFF;
 }
 
 .loginbtn{
-padding-left:360px;
-padding-top:22px;
-
+padding-left:300px;
+padding-top:0px;
+width:160px;
 
 }
 .regbtn{

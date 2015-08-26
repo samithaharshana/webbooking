@@ -44,7 +44,7 @@ a {
 }
 </style>
 
-<div class="main-wrapper-header-div-logo"><a href="index.html"><img src="images/logo2.png" alt="Matara Beach Hotel Sri Lanka" width="400" height="150" border="0" title="Matara Beach Hotel Sri Lanka" /></a></div>
+<div class="main-wrapper-header-div-logo"><a href="index.php"><img src="images/logo2.png" alt="Matara Beach Hotel Sri Lanka" width="400" height="150" border="0" title="Matara Beach Hotel Sri Lanka" /></a></div>
         
 		
 		<div class="main-wrapper-header-div-res-right">
@@ -61,7 +61,7 @@ a {
     <div class="col2"style="float:left; width:101px; height:auto;">
     
 	<div class="res">
-	 <a href="http://www.secure-guestv4.com/new/select_date.php?hotel_id=625">
+	 <a href="reserve.php">
 					<img src="images/reservation.png" alt="MATARA Beach Hotel"  width="131" height="35" border="0" title="MATARA Beach Hotel" />
 				</a>
 </div>
@@ -74,12 +74,45 @@ a {
 
 <div class="main" >
 
+<?php
+session_start();
+include_once 'dbconnect.php';
+
+if(isset($_SESSION['user'])!="")
+{
+ header("Location: homelogout.php");
+}
+if(isset($_POST['btn-login']))
+{ 
+ $username1 = mysql_real_escape_string($_POST['uname']);
+ $upass = mysql_real_escape_string($_POST['password']);
+ $sql="SELECT * FROM reg WHERE UserName='$username1'";
+ $res=mysql_query($sql) or trigger_error(mysql_error().$sql);;
+ 
+ $row=mysql_fetch_array($res);
+ if($row['Password']==md5($upass))
+ {
+  $_SESSION['user'] = $row['UserName'];
+  header("Location: homelogout.php");
+ }
+ else
+ {
+  ?>
+        <script>alert('wrong user name or password');</script>
+        <?php
+ }
+ 
+ 
+ 
+}
+?>
+<form method="post" >
 
 <div class="col1" style="float:left; width:90px; height:auto;">
     
-	 <label><font color="white">Email Address</label>
+	 <label><font color="white">User Name</label>
     <div class="emailid" style="width:90px; float:left;">
-        <input type="text" name="email" id="email" />
+        <input type="text" name="uname" id="uname" placeholder="username" required/>
     </div>
 	
 </div>
@@ -88,30 +121,34 @@ a {
       <label><font color="white">Password</label>
     </div>
     <div class="password"style="width:100px; float:left;">
-        <input type="text" name="password" id="password" />
+        <input type="password" name="password" id="password" placeholder="password" required/>
     </div>
 </div>
 <div class="loginbtn">
-	<input type="button" style="background-color:lightgreen;width:70px" value="Login" class="login-btn" onclick="$('#login_form').submit()" />
+	<input type="submit" style="background-color:#00FF00;width:70px" name="btn-login" value="Login" class="login-btn"  />
 
 
 </div>
 
 <div class="registration">
-<input type="button" style="background-color:lightgreen;width:70px" id="reg-btn" value="Register" class="login-btn"/>
+
+<input type="submit" style="background-color:#00FF00;width:70px" formaction="register.php" name="register" id="reg-btn" value="Register" class="login-btn" />
+
+
+
 </div>
 
-
+</form>	
   <div class="submenu">
 				
 				
-                    <div class="main-wrapper-header-menu-div-2"><h3><a href="http://www.galadarihotel.lk/contact.php" style="text-decoration:none">CONTACT US</a></h3></div>
+                    <div class="main-wrapper-header-menu-div-2"><h3><a href="http://www.galadarihotel.lk/contact.php"style="text-decoration:none" >CONTACT US</a></h3></div>
                    <div class="main-wrapper-header-menu-div-2 "><h3><a href="http://www.galadarihotel.lk/careers.php" style="text-decoration:none" >CAREERS</a></h3></div>
                                
                    
                    <div class="main-wrapper-header-menu-div-2"><h3><a href="http://www.galadarihotel.lk/promotions.php" style="text-decoration:none">PROMOTIONS</a></h3></div>
                     <div class="main-wrapper-header-menu-div-2 "><h3><a href="http://www.galadarihotel.lk/about.php" style="text-decoration:none">ABOUT</a></h3></div>
-                  <div class="main-wrapper-header-menu-div-2"><h3><a href="http://www.galadarihotel.lk/" style="text-decoration:none">HOME</a></h3></div>
+                  <div class="main-wrapper-header-menu-div-2"><h3><a href="index.php" style="text-decoration:none">HOME</a></h3></div>
                 </div>
 
 

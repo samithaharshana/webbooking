@@ -204,7 +204,7 @@
                                 <tr>
                                     <td style="vertical-align:top" colspan="2">
                                                                                 <p class="pull-right" style="text-align: center; margin-top: 8px;">
-												<a href="guestdetails.php" id="btnguestdetails" class="btn btn-large btn-primary translate" style="width: 140px; font-size: 19px;">Guest details »</a>
+												<a href="guestdetailsdata.php" id="btnguestdetails" class="btn btn-large btn-primary translate" style="width: 140px; font-size: 19px;">Guest details »</a>
                                         </p>
                                                                             </td>
                                 </tr>

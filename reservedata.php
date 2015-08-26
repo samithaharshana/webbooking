@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
@@ -160,11 +163,15 @@ if (y==null || y=="")
 	</head>
 
 	<body background="images/background.jpg">
+	
+	
 		<header>
 			<a href="index.php">
 				<img id="logoheader_image" src="images/matarahotel1.jpg" alt="Hotel Matara" class="stretch"/>
 			</a>
 		</header>
+		
+		
 		<div class="nav">
 
 			<ul class="breadcrumb pull-left">
@@ -186,9 +193,7 @@ if (y==null || y=="")
 						</li>
 					</ul>
 					</div>
-					
-					
-					
+			
 					
 				
 		<div class="arrival">
@@ -200,17 +205,45 @@ if (y==null || y=="")
 	  <div align="center" style="padding-top: 7px; font-size:30px;"><strong>RESERVATION</strong></div></br>
 	<div style="margin-top: 14px;">
 	
-	<form method="post" action="showrooms.php" name="index" onsubmit="return validateForm()">
+	<form method="post" action="showroomsdata.php" name="index" onsubmit="return validateForm()">
+	
+							
+				  <?php  
+
+//session_start();
+include_once 'dbconnect.php';
+
+
+//cheking the existence entered Transaction ID is valid or available under this username.
+
+
+$res1=mysql_query("select * from reserveguest where UserName = '".$_SESSION['user']."' and TemporaryID='".$_SESSION['temp']."'") or die(mysql_error());
+
+
+
+	
+		while($row = mysql_fetch_array($res1)) {
+		
+$arrival=$row['ArrivalDate'];
+$departure=$row['DepartureDate'];	
+	
+   }
+  
+   ?>	
+		
+	
+
   
       <label style="margin-left: 0px;">Arrival Date : </label>
-     <input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="start" id="sd" value="" maxlength="10" readonly />
+     <input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="start" id="sd" value='<?php echo  $arrival; ?>' maxlength="10" readonly />
 	 <span>  </span>
      
 	 <label style="margin-left: 0px;">Daparture Date : </label>
-      <input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="end" id="ed" value="" maxlength="10" readonly />
+      <input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="end" id="ed" value='<?php echo  $departure; ?>' maxlength="10" readonly />
 	  <BR />
 	  <br></br>
-	
+	  
+	  
 	  
 	 
 						<div class="pull-right1" style="float:right !important;display:block;margin: 10px 100px 20px 20px; width:300px;">

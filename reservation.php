@@ -253,7 +253,7 @@ Click your arrival and departure dates on the calendar.
   <div class="reservation">
 	  <div align="center" style="padding-top: 7px; font-size:30px;"><strong>RESERVATION</strong></div></br>
 	<div style="margin-top: 14px;">
-	<form method="post" action="showrooms.php" name="index" onsubmit="return validateForm()">
+	<form method="post" action="selectroom.php" name="index" onsubmit="return validateForm()">
   
       <label style="margin-left: 0px;">Arrival Date : </label>
      <input type="text" class="w8em format-d-m-y highlight-days-67 range-low-today" name="start" id="sd" value="" maxlength="10" readonly /></input>

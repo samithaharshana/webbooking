@@ -57,7 +57,7 @@
 				</head>
 				<body>
 				
-				SUCCESS
+				SUCCESSFULLY MODIFIED
 				
 				
 <?php
@@ -73,18 +73,19 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+echo $_SESSION['temp'];
 	$country = $_POST["country"];
 	//expire date
 	$new="$_POST[expiremonth]". "M". "$_POST[expireyear]"."Y";
 	
-$sql = "INSERT INTO reserveguest (UserName,FirstName, LastName, Email,Country,Mobile,NoOfAdults,NoOfChildren,ArrivalDate,DepartureDate,ArrivalTime,SpecialRequest,CardType,CardNumber,CardOwnerIsGuest,CardOwner,ExpireDate,SecurityCode)
-VALUES ('".$_SESSION['user']."','$_POST[fname]','$_POST[lname]','$_POST[email]','$country','$_POST[mobile]','$_POST[adults]','$_POST[child]','".$_SESSION['arrival']."','".$_SESSION['departure']."','$_POST[time]','$_POST[specialrequest]','$_POST[cardtype]','$_POST[number]','$_POST[isowner]','$_POST[guestname]','$new','$_POST[code]')";
+	
+$sql="UPDATE reserveguest
+SET UserName='".$_SESSION['user']."',FirstName='$_POST[fname]', LastName='$_POST[lname]', Email='$_POST[email]',Country= '$country',Mobile='$_POST[mobile]',NoOfAdults='$_POST[adults]',NoOfChildren='$_POST[child]',ArrivalDate='".$_SESSION['arrival']."',DepartureDate='".$_SESSION['departure']."',ArrivalTime='$_POST[time]',SpecialRequest='$_POST[specialrequest]',CardType='$_POST[cardtype]',CardNumber='$_POST[number]',CardOwnerIsGuest='$_POST[isowner]',CardOwner='$_POST[guestname]',ExpireDate='$new',SecurityCode='$_POST[code]' WHERE TemporaryID='".$_SESSION['temp']."' and UserName = '".$_SESSION['user']."'";
 
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "Your reservation modified successfully";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
@@ -93,28 +94,6 @@ $conn->close();
 
 
 
-
-include_once 'dbconnect.php';
-
-
-
-$r1=mysql_query( "SELECT MAX( TemporaryID ) AS max FROM reserveguest" );
-
-while ($row = mysql_fetch_array($r1)) {
-	echo  "<br>Your Transaction ID for this transactin is&nbsp".$row['max']."<br>Please remember this for further modifications or cancelations" ;
-  
-}
-
-$res1=mysql_query("select * from reserveguest where UserName = '".$_SESSION['user']."'") or die(mysql_error());
-
-
-   echo "<br>Your Accont booking summary"."<br><br>";
-	echo "TrsnsactionID"."&nbsp&nbsp&nbsp&nbsp "."FirstName". "&nbsp&nbsp&nbsp&nbsp"."LastName<br>";
-   while ($row = mysql_fetch_array($res1)) {
-	echo  $row['TemporaryID'] . "&nbsp&nbsp&nbsp&nbsp" . $row['FirstName'] . " &nbsp&nbsp&nbsp&nbsp". $row['LastName']."<br>";
-  
-}
-mysql_close();
 ?> 	
 
 

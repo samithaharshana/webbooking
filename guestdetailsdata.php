@@ -211,11 +211,10 @@ if (y==null || y=="")
 		
 <div class="span12">
 
-
                     <div id="details-guest" class="clearfix">
                         <div class="row">
                            
- <form method="post" action="success.php" name="index" onsubmit="return validateForm()" > 
+ <form method="post" action="successdata.php" name="index" onsubmit="return validateForm()" > 
                          
                                     <div class="span6" style="border-right: 1px dotted #BFBFBF; padding-right: 25px;">                                
 

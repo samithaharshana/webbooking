@@ -222,7 +222,7 @@ $_SESSION['nights'] = $diff;
 	</td>
 	<td>
 	
-	<form method="post" action="confirm.php" name="index1" >
+	<form method="post" action="confirmdata.php" name="index1" >
 <select id="name1" name="room1">
  <option value="0"> </option>
  <option value="1">1</option>
